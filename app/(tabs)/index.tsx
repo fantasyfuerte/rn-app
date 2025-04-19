@@ -1,5 +1,7 @@
+import Switchscreen from "@/components/ui/switch-screen";
 import { FontAwesome } from "@expo/vector-icons";
 import { useTheme } from "@react-navigation/native";
+import { useState } from "react";
 import {
   Image,
   StyleSheet,
@@ -11,8 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
-  const theme = useTheme();
-  console.log(theme);
+  const [selected, setSelected] = useState<0 | 1>(0);
 
   return (
     <SafeAreaView>
@@ -27,6 +28,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
       </View>
+      <Switchscreen selected={selected} setSelected={setSelected} />
     </SafeAreaView>
   );
 }
@@ -38,11 +40,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: 16,
+    paddingVertical: 24,
   },
   headerText: {
     color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 20,
+    fontWeight: "800",
   },
   headerButtons: {
     display: "flex",
