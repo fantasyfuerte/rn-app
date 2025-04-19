@@ -1,4 +1,4 @@
-import Switchscreen from "@/components/ui/switch-screen";
+import SwitchScreen from "@/components/ui/switch-screen";
 import { FontAwesome } from "@expo/vector-icons";
 import { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
@@ -20,7 +20,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
       </View>
-      <Switchscreen selected={selected} setSelected={setSelected} />
+      <SwitchScreen selected={selected} setSelected={setSelected} />
     </SafeAreaView>
   );
 }
