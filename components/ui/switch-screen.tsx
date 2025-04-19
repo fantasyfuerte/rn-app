@@ -1,8 +1,8 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 
 interface Props {
-  selected: number;
-  setSelected: (selected: 0 | 1) => void;
+  selected: "available-jobs" | "my-jobs";
+  setSelected: (selected: "available-jobs" | "my-jobs") => void;
 }
 
 export default function Switchscreen({ selected, setSelected }: Props) {
@@ -10,24 +10,36 @@ export default function Switchscreen({ selected, setSelected }: Props) {
     <View style={styles.switch}>
       <TouchableOpacity
         style={
-          selected == 0 ? styles.selectedSwitchButton : styles.switchButton
+          selected == "available-jobs"
+            ? styles.selectedSwitchButton
+            : styles.switchButton
         }
-        onPress={() => setSelected(0)}
+        onPress={() => setSelected("available-jobs")}
       >
         <Text
-          style={selected == 0 ? styles.selectedSwitchText : styles.switchText}
+          style={
+            selected == "available-jobs"
+              ? styles.selectedSwitchText
+              : styles.switchText
+          }
         >
           Available Jobs
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={
-          selected == 1 ? styles.selectedSwitchButton : styles.switchButton
+          selected == "my-jobs"
+            ? styles.selectedSwitchButton
+            : styles.switchButton
         }
-        onPress={() => setSelected(1)}
+        onPress={() => setSelected("my-jobs")}
       >
         <Text
-          style={selected == 1 ? styles.selectedSwitchText : styles.switchText}
+          style={
+            selected == "my-jobs"
+              ? styles.selectedSwitchText
+              : styles.switchText
+          }
         >
           My Jobs
         </Text>

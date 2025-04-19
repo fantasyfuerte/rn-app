@@ -6,7 +6,9 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
-  const [selected, setSelected] = useState<0 | 1>(0);
+  const [selected, setSelected] = useState<"available-jobs" | "my-jobs">(
+    "available-jobs"
+  );
 
   return (
     <SafeAreaView>
