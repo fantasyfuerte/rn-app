@@ -1,6 +1,5 @@
 import Switchscreen from "@/components/ui/switch-screen";
 import { FontAwesome } from "@expo/vector-icons";
-import { useTheme } from "@react-navigation/native";
 import { useState } from "react";
 import {
   Image,
