@@ -1,10 +1,13 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Heading } from "@/components/ui/heading";
 
 export default function Header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.headerText}>WorkersHub</Text>
+      <Heading size="xl" bold>
+        WorkersHub
+      </Heading>
       <View style={styles.headerButtons}>
         <TouchableOpacity>
           <FontAwesome name="search" size={20} color={"#fff"} />
@@ -24,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: 16,
-    paddingVertical: 24,
+    paddingVertical: 20,
   },
   headerText: {
     color: "#fff",

@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#2f2f2f",
     borderRadius: 6,
     margin: 16,
-    marginVertical: 24,
+    marginVertical: 20,
   },
   switchButton: {
     display: "flex",
